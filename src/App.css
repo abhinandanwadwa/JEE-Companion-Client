@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+.scale-down-top-right0{
+    animation:scale-down-top-right 0.1s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes scale-down-top-right{
+    0%{
+        transform:scale(1);transform-origin:right top;
+    }
+    100%{
+        transform:scale(.5);transform-origin:right top;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.scale-up-top-right{
+    animation:scale-up-top-right 0.1s;
+}
+
+@keyframes scale-up-top-right{
+    0%{
+        transform:scale(.5);transform-origin:top right
+    }
+    100%{
+        transform:scale(1);transform-origin:top right
+    }
+}
+
+.thisisme {
+    background-image: url(https://images.unsplash.com/photo-1616763355603-9755a640a287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+}
+/* 
+.myAlert {
+    position: absolute;
+    right: 0;
+    display: flex;
+    width: 33%;
+    justify-content: center;
+} */
+
+.competitor-img {
+    width: 60px;
+    height: 32px;
+    border-radius: 20px;
+}
+
+.vl {
+    border-left: 2px solid white;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 65px;
+}
+
+.confirm-challenge-btn {
+    color: white;
+    background: #18365d;
+    padding: 15px;
+    /* width: 25%; */
+    border-radius: 15px;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+.confirm-challenge-btn:hover {
+    background: #27528c;
+}
+
+
+
+
+
+.scale-up-center{
+    animation:scale-up-center 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes scale-up-center{
+    0%{
+        transform:scale(0)
+    }
+    50%{
+        transform:scale(1)
+    }
+    70%{
+        transform:scale(0.9)
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+.scale-down-center{
+    animation:scale-down-center 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes scale-down-center{
+    0%{
+        transform:scale(1);
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        transform:scale(0)
+    }}
+
+
+
+
+
+
+.confirm-challenge-btn:disabled,
+.confirm-challenge-btn[disabled]{
+    background-color: #082954;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+
+.cancel-btn:disabled,
+.cancel-btn[disabled]{
+    background-color: #29313d;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 37px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 16px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+
+
+
+@media only screen and (max-width: 1200px) {
+  .dash-container {
+    display: flex;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  font-family: 'Open Sans', sans-serif;
 }
