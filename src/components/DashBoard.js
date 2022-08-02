@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 const DashBoard = () => {
     const navigate = useNavigate();
-    const[pendingChallenges, setPendingChallenges] = useState();
+    const[pendingChallenges, setPendingChallenges] = useState([]);
     const [skeletonArray, setSkeletonArray] = useState([1, 2, 3]);
     const [isLoadingCards, setIsLoadingCards] = useState(false);
     const [challengeDetailsLoading, setChallengeDetailsLoading] = useState(false);
@@ -194,10 +194,10 @@ const capitaliseIt = (str) => {
           }
 
           
-            {!isLoadingCards && pendingChallenges && pendingChallenges.map((challenge) => {
+            {pendingChallenges.map((challenge) => {
               const dateStu = challenge.createdAt;
               return (
-                <div key={challenge._id} className="card rounded-3xl my-4 mx-4 bg-[#555555] md:w-[28%] w-full">
+                <div key={challenge._id} className="card fade-in rounded-3xl my-4 mx-4 bg-[#555555] md:w-[28%] w-full">
                   <div className="card-head text-white my-4 text-sm mx-4">
                     {/* December 10, 2020 */}
                     {convertToMonthName(new Date(dateStu).getMonth()) + " " + new Date(dateStu).getDate().toString() + ", " + new Date(dateStu).getFullYear()}
