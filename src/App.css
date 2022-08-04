@@ -4,6 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
+body {
+  overflow-x: hidden;
+}
 
 .scale-down-top-right0{
     animation:scale-down-top-right 0.1s;
