@@ -53,7 +53,48 @@ const Mychallanges = () => {
         {challengeList.map((challenge) => {
           return (
               <div key={challenge._id} className="card md:w-[80%] w-[100%] bg-gray-800 rounded-2xl my-2 cursor-pointer">
+
+                {/* Challenge Completed by Both */}
                 {challenge.CompletedBySender && challenge.CompletedByReceiver && <div style={{alignItems: 'center'}} className="update p-4 flex 2xl:items-start w-full text-white hover:rounded-2xl hover:bg-gray-700">
+                  <div className="left flex flex-col">
+                    <img src={challenge.challengeByPFPURI} alt="Abhi" className='h-10 w-10 rounded-full object-cover' />
+                    <p className='ml-2'>vs</p>
+                    <img src={challenge.challengeToPFPURI} width={50} alt="Monika" className='h-10 w-10 rounded-full object-cover' />
+                  </div>
+                  <div style={{borderLeft: '2px solid #8080805e', height: '104px'}} className="mx-3 relative"></div>
+                  <div className="right flex">
+                    <p className=''><strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeToName:challenge.challengeByName}</strong> Wins Over <strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeByName:challenge.challengeToName}</strong> and got <strong>100</strong> points</p>
+                  </div>
+                </div>}
+
+                {/* Challenge Not Completed by Receiver */}
+                {challenge.CompletedBySender && !challenge.CompletedByReceiver && <div style={{alignItems: 'center'}} className="update p-4 flex 2xl:items-start w-full text-white hover:rounded-2xl hover:bg-gray-700">
+                  <div className="left flex flex-col">
+                    <img src={challenge.challengeByPFPURI} alt="Abhi" className='h-10 w-10 rounded-full object-cover' />
+                    <p className='ml-2'>vs</p>
+                    <img src={challenge.challengeToPFPURI} width={50} alt="Monika" className='h-10 w-10 rounded-full object-cover' />
+                  </div>
+                  <div style={{borderLeft: '2px solid #8080805e', height: '104px'}} className="mx-3 relative"></div>
+                  <div className="right flex">
+                    <p className=''><strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeToName:challenge.challengeByName}</strong> Wins Over <strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeByName:challenge.challengeToName}</strong> and got <strong>100</strong> points</p>
+                  </div>
+                </div>}
+
+                {/* Challenge Not Completed by Sender */}
+                {!challenge.CompletedBySender && challenge.CompletedByReceiver && <div style={{alignItems: 'center'}} className="update p-4 flex 2xl:items-start w-full text-white hover:rounded-2xl hover:bg-gray-700">
+                  <div className="left flex flex-col">
+                    <img src={challenge.challengeByPFPURI} alt="Abhi" className='h-10 w-10 rounded-full object-cover' />
+                    <p className='ml-2'>vs</p>
+                    <img src={challenge.challengeToPFPURI} width={50} alt="Monika" className='h-10 w-10 rounded-full object-cover' />
+                  </div>
+                  <div style={{borderLeft: '2px solid #8080805e', height: '104px'}} className="mx-3 relative"></div>
+                  <div className="right flex">
+                    <p className=''><strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeToName:challenge.challengeByName}</strong> Wins Over <strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeByName:challenge.challengeToName}</strong> and got <strong>100</strong> points</p>
+                  </div>
+                </div>}
+
+                {/* Challenge Not Completed by both Sender and Receiver */}
+                {!challenge.CompletedBySender && !challenge.CompletedByReceiver && <div style={{alignItems: 'center'}} className="update p-4 flex 2xl:items-start w-full text-white hover:rounded-2xl hover:bg-gray-700">
                   <div className="left flex flex-col">
                     <img src={challenge.challengeByPFPURI} alt="Abhi" className='h-10 w-10 rounded-full object-cover' />
                     <p className='ml-2'>vs</p>
