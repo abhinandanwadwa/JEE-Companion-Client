@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Mychallanges = () => {
   const navigate = useNavigate();
   const [challengeList, setChallengeList] = useState([]);
+  const [myId, setMyId] = useState("");
 
   useEffect(() => {
     const ChallengeHistory = async () => {
@@ -22,6 +23,23 @@ const Mychallanges = () => {
       // console.log(json);
       setChallengeList(json);
     }
+
+    const getMyself = async () => {
+      const token = localStorage.getItem('auth-token');
+
+      const response = await fetch('http://localhost:5000/api/auth/getMyDetails', {
+        method: 'GET',
+        headers:{
+          'Content-Type': 'application/json',
+          'auth-token': token
+        }
+      });
+      const json = await response.json();
+      // console.log(json);
+      setMyId(json._id);
+    }
+
+    getMyself();
     ChallengeHistory();
   }, [])
   
