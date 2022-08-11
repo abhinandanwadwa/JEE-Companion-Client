@@ -76,7 +76,7 @@ const Mychallanges = () => {
                   </div>
                   <div style={{borderLeft: '2px solid #8080805e', height: '104px'}} className="mx-3 relative"></div>
                   <div className="right flex">
-                    <p className=''><strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeToName:challenge.challengeByName}</strong> Wins Over <strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeByName:challenge.challengeToName}</strong> and got <strong>100</strong> points</p>
+                    <p className=''>Challenge Completed By <strong>{challenge.challengeByName}</strong> and to be Completed by <strong>{challenge.challengeToName}</strong></p>
                   </div>
                 </div>}
 
@@ -89,7 +89,7 @@ const Mychallanges = () => {
                   </div>
                   <div style={{borderLeft: '2px solid #8080805e', height: '104px'}} className="mx-3 relative"></div>
                   <div className="right flex">
-                    <p className=''><strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeToName:challenge.challengeByName}</strong> Wins Over <strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeByName:challenge.challengeToName}</strong> and got <strong>100</strong> points</p>
+                  <p className=''>Challenge Completed By <strong>{challenge.challengeToName}</strong> and to be Completed by <strong>{challenge.challengeByName}</strong></p>
                   </div>
                 </div>}
 
@@ -102,7 +102,7 @@ const Mychallanges = () => {
                   </div>
                   <div style={{borderLeft: '2px solid #8080805e', height: '104px'}} className="mx-3 relative"></div>
                   <div className="right flex">
-                    <p className=''><strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeToName:challenge.challengeByName}</strong> Wins Over <strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeByName:challenge.challengeToName}</strong> and got <strong>100</strong> points</p>
+                  <p className=''>Challenge to be Completed By Both <strong>{challenge.challengeByName}</strong> and <strong>{challenge.challengeToName}</strong></p>
                   </div>
                 </div>}
               </div>
