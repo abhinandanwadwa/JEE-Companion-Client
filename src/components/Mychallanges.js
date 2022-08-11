@@ -55,13 +55,13 @@ const Mychallanges = () => {
               <div key={challenge._id} className="card md:w-[80%] w-[100%] bg-gray-800 rounded-2xl my-2 cursor-pointer">
                 {challenge.CompletedBySender && challenge.CompletedByReceiver && <div style={{alignItems: 'center'}} className="update p-4 flex 2xl:items-start w-full text-white hover:rounded-2xl hover:bg-gray-700">
                   <div className="left flex flex-col">
-                    <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" alt="Abhi" className='h-10 w-10 rounded-full object-cover' />
+                    <img src={challenge.challengeByPFPURI} alt="Abhi" className='h-10 w-10 rounded-full object-cover' />
                     <p className='ml-2'>vs</p>
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" width={50} alt="Monika" className='h-10 w-10 rounded-full object-cover' />
+                    <img src={challenge.challengeToPFPURI} width={50} alt="Monika" className='h-10 w-10 rounded-full object-cover' />
                   </div>
                   <div style={{borderLeft: '2px solid #8080805e', height: '104px'}} className="mx-3 relative"></div>
                   <div className="right flex">
-                    <p className=''><strong>Abhinandan</strong> Wins Over <strong>Monika</strong> and got <strong>100</strong> points</p>
+                    <p className=''><strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeToName:challenge.challengeByName}</strong> Wins Over <strong>{challenge.ReceiverScore>challenge.SenderScore?challenge.challengeByName:challenge.challengeToName}</strong> and got <strong>100</strong> points</p>
                   </div>
                 </div>}
               </div>
