@@ -8,6 +8,5 @@ export const refreshTokenSetup = (res) => {
         console.log('new auth token', newAuthRes);
         setTimeout(refreshToken, refreshTiming);
     };
-
     setTimeout(refreshToken, refreshTiming);
 };
