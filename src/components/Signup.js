@@ -39,7 +39,7 @@ const Signup = () => {
             console.log(`The Image URI is: ${imageURI}`);
             
             setConfirmPasswordError(false);
-            fetch('http://localhost:5000/api/auth/createuser', {
+            fetch('http://localhost:8181/api/auth/createuser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

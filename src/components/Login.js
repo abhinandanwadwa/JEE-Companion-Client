@@ -20,7 +20,7 @@ const Login = () => {
     }, [])
 
     const loginHandler = async () => {
-        fetch('http://localhost:5000/api/auth/login', {
+        fetch('http://localhost:8181/api/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

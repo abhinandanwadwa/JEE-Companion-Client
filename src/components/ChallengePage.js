@@ -34,7 +34,7 @@ const ChallengePage = () => {
     useEffect(() => {
       const getHim = async () => {
         const token = localStorage.getItem('auth-token');
-        const response = await fetch(`http://localhost:5000/api/auth/getuser/${id}`, {
+        const response = await fetch(`http://localhost:8181/api/auth/getuser/${id}`, {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const ChallengePage = () => {
 
       const getMe = async () => {
         const token = localStorage.getItem('auth-token');
-        const response = await fetch('http://localhost:5000/api/auth/getMyDetails', {
+        const response = await fetch('http://localhost:8181/api/auth/getMyDetails', {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const ChallengePage = () => {
 
 
         const token = localStorage.getItem('auth-token');
-        const response = await fetch(`http://localhost:5000/api/challenge/sendchallenge/${him._id}`, {
+        const response = await fetch(`http://localhost:8181/api/challenge/sendchallenge/${him._id}`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',

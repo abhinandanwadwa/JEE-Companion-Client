@@ -15,7 +15,7 @@ const MyProfile = () => {
     useEffect(() => {
       const getUserDetails = async () => {
         const token = localStorage.getItem('auth-token');
-        await fetch('http://localhost:5000/api/auth/getMyDetails', {
+        await fetch('http://localhost:8181/api/auth/getMyDetails', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const MyProfile = () => {
 
     const changePassword = async () => {
         const token = localStorage.getItem('auth-token');
-        await fetch('http://localhost:5000/api/auth/updatepassword', {
+        await fetch('http://localhost:8181/api/auth/updatepassword', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const MyProfile = () => {
 
     const updateDetails = async () => {
         const token = localStorage.getItem('auth-token');
-        await fetch('http://localhost:5000/api/auth/updatedetails', {
+        await fetch('http://localhost:8181/api/auth/updatedetails', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

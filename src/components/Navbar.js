@@ -48,7 +48,7 @@ const Navbar = (props) => {
   useEffect(() => {
     const getMyDetails = async () => {
       const token = localStorage.getItem('auth-token');
-      fetch('http://localhost:5000/api/auth/getMyDetails', {
+      fetch('http://localhost:8181/api/auth/getMyDetails', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

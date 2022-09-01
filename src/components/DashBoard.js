@@ -19,7 +19,7 @@ const DashBoard = () => {
         const getPendingChallenges = async () => {
           setIsLoadingCards(true);
           const token = localStorage.getItem('auth-token');
-          await fetch('http://localhost:5000/api/challenge/getpendingreceivedchallenges', {
+          await fetch('http://localhost:8181/api/challenge/getpendingreceivedchallenges', {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const DashBoard = () => {
       openModal();
       setChallengeDetailsLoading(true);
       const token = localStorage.getItem('auth-token');
-      await fetch(`http://localhost:5000/api/challenge/getchallengebyid/${id}`, {
+      await fetch(`http://localhost:8181/api/challenge/getchallengebyid/${id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

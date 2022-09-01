@@ -8,7 +8,7 @@ const Challenge = () => {
     const getMyCompetitors = async () => {
 
       const token = localStorage.getItem('auth-token');
-      const response = await fetch('http://localhost:5000/api/auth/getCompetitors', {
+      const response = await fetch('http://localhost:8181/api/auth/getCompetitors', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ const Mychallanges = () => {
   useEffect(() => {
     const ChallengeHistory = async () => {
       const token = localStorage.getItem('auth-token');
-      const response = await fetch('http://localhost:5000/api/challenge/challengehistory', {
+      const response = await fetch('http://localhost:8181/api/challenge/challengehistory', {
         method: 'GET',
         headers:{
           'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ const Mychallanges = () => {
 
     const getMyself = async () => {
       const token = localStorage.getItem('auth-token');
-      const response = await fetch('http://localhost:5000/api/auth/getMyDetails', {
+      const response = await fetch('http://localhost:8181/api/auth/getMyDetails', {
         method: 'GET',
         headers:{
           'Content-Type': 'application/json',
