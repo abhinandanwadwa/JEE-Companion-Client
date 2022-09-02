@@ -9,7 +9,7 @@ const Test = () => {
     useEffect(() => {
       const checkValidTest = async () => {
         const token = localStorage.getItem('auth-token');
-        await fetch('http://localhost:5000/api/challenge/checkvalidtest', {
+        await fetch('http://localhost:8181/api/challenge/checkvalidtest', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
