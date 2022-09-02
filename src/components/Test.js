@@ -39,7 +39,7 @@ const Test = () => {
         {!error && 
             <>
             <div className="text-white container flex justify-between flex-row w-[100vw] h-[100vh]">
-                <div className="left-navigation flex flex-col w-[25%]">
+                <div className="left-navigation flex flex-col w-[35%]">
                     <div className="top-info w-[100%] h-[20%] bg-blue-800 justify-center items-center flex">
                         <img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" width={40} className="mx-2 h-9 object-cover rounded-full" alt="" />
                         <p className="name text-white text-2xl font-bold">Abhinandan Wadhwa</p>
@@ -81,7 +81,7 @@ const Test = () => {
                         <button className="submit-test bg-blue-800 p-3">Submit Test</button>
                     </div>
                 </div>
-                <div className="right-main flex flex-col w-[70%] bg-blue-800">
+                <div className="right-main flex flex-col w-[70%] ml-40 bg-blue-800">
                     <div className="top-info">
 
                     </div>
